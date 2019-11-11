@@ -13,165 +13,173 @@
   <title>Hello, world!</title>
 </head>
 
-<body class="bckColor">
+<body class="bckColor" data-spy="scroll" data-target="#navbarNav">
   <nav class="navbar navbar-dark navbar-expand-lg sticky-top  bg-dark ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-
+        <img src="logo.png" width="30" height="30" class="d-inline-block align-top">
         Name</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#about">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Offer</a>
+            <a class="nav-link" href="#offer">Offer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Our Team</a>
+            <a class="nav-link" href="#team">Our Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Career</a>
+            <a class="nav-link" href="#career">Career</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <div class="jumbotron text-center" id="home">
+      <h1>Very Real IT Company</h1>
+      <p>Dont check it, just buy!</p>
+    </div>
+    <section id="about" class="pt-1">
+      <div class="container bckColor">
+        <h1 class="text-center">About us</h1>
+        <hr />
+        <p class="text-center">Our developers are a bunch of young, talented individuals full of innovative ideas and are always ready for new challenges. We set up a specific team to execute each project, not the other way around. This way they get
+          experience working in many team configurations within the company. Being used to change makes them more productive.
+      </div>
 
-  <div class="jumbotron text-center" id="home">
-    <h1>Very Real IT Company</h1>
-    <p>Dont check it, just buy!</p>
+    </section>
+    <section id="offer" class="pt-1">
+      <div class="container bckColor">
+        <h1 class="text-center">Offer</h1>
+        <hr />
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Mobile applications</h3>
+            <p>While creating mobile applications we use various technologies and outstanding tools. Libraries and modules developed at It Name are used by thousands of React Native and Expo professionals in creation of their products. We are
+              always open to new opportunities to use cutting-edge technologies and tackle exciting challenges.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Web applications</h3>
+            <p>We develop custom web applications for startups and existing businesses alike. We are experienced in a variety of technologies and are comfortable with development of projects ranging from a couple of weeks to dozens of man-months.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Modern multimedia solutions</h3>
+            <p>We have extensive experience with building modern multimedia solutions. We offer consulting and development services in, among others, the following areas: audio/video real-time streaming and processing, mass storage, performance and
+              scalability.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Open source contribution</h3>
+            <p>At It Name we strongly believe that our commitment in Open-Sourced products is important. Thousands of developers have already used our React Native modules in production.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Education</h3>
+            <p>It is amazing to see rapid development of multiple technologies around us. If you create apps with React Native or Expo, you probably use code written at It Name. Through lectures, presentations, workshops and hackathons we
+              spread knowledge among students and professionals eager to learn.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Startup development</h3>
+            <p>Start-ups were our focus since the start of It Name. We offer consulting, design, development and analysis services for startups in all stages of growth. We are also involved in several start-ups as cofounders.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="team" class="pt-1">
+      <div class="container bckColor">
+        <h1 class="text-center">Our Team</h1>
+      </div>
+      <hr />
+      <div class="container">
+        <div class="row py-3">
+          <div class="col col-12 col-sm-6 col-lg-3 col-lg-offset-2 name">
+            <div class="container"><img src="team3.jpg" class="img-responsive center-block"></div>
+            <div>Robert Men</div>
+
+          </div>
+          <div class=" col col-12 col-sm-6 col-lg-3 col-lg-offset-2  name">
+            <div class="container"><img src="team6.jpg" class="img-responsive center-block"></div>
+            <div>Jan Gibas</div>
+
+          </div>
+          <div class="col col-12 col-sm-6 col-lg-3 col-lg-offset-2  name">
+            <div class="container name"><img src="team2.jpg" class="img-responsive center-block"></div>
+            <div>Karol Wojak</div>
+
+          </div>
+          <div class="col col-12 col-sm-6 col-lg-3 col-lg-offset-2  name">
+            <div class="container name"><img src="team9.jpg" class="img-responsive center-block"></div>
+            <div>Urk</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="career" class="pt-1">
+      <div class="container bckColor ">
+        <h1 class="text-center">Career</h1>
+      </div>
+      <hr />
+      <p class="container bckColor">Currently we are looking for Software Engineers and Software Engineer Interns. We don't have any specific requirements, we are just looking for smart people. If you think that you would fit here, fill form below!
+      </p>
+
+      <form class="container bckColor">
+        <div class="form-group text-left">
+          <label for="sample ">Email</label>
+          <input type="email" class="form-control" id="sample" placeholder="sample@gmail.com">
+        </div>
+        <div class="form-group text-left">
+          <label for="przykladowySelect">Possition</label>
+          <select class="form-control" id="przykladowySelect">
+            <option>Software Engineer</option>
+            <option>Software Engineer Intern</option>
+
+          </select>
+        </div>
+        <div class="form-group text-left">
+          <label for="cs">Attach CV</label>
+          <input type="file" class="form-control-file" id="cs">
+        </div>
+        <div class="form-check text-left">
+          <input type="checkbox" class="form-check-input" id="RODO">
+          <label class="form-check-label" for="RODO">I agree RODO doesnt kill us!</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+
+    </section>
   </div>
-  <section>
-    <div class="container bckColor">
-      <h1 class="text-center">About us</h1>
-      <hr />
-      <p class="text-center">Our developers are a bunch of young, talented individuals full of innovative ideas and are always ready for new challenges. We set up a specific team to execute each project, not the other way around. This way they get
-        experience working in many team configurations within the company. Being used to change makes them more productive.
-    </div>
-
-  </section>
-  <section>
-    <div class="container bckColor">
-      <h1 class="text-center">Offer</h1>
-      <hr />
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Mobile applications</h3>
-          <p>While creating mobile applications we use various technologies and outstanding tools. Libraries and modules developed at Software Mansion are used by thousands of React Native and Expo professionals in creation of their products. We are
-            always open to new opportunities to use cutting-edge technologies and tackle exciting challenges.</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Web applications</h3>
-          <p>We develop custom web applications for startups and existing businesses alike. We are experienced in a variety of technologies and are comfortable with development of projects ranging from a couple of weeks to dozens of man-months.</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Modern multimedia solutions</h3>
-          <p>We have extensive experience with building modern multimedia solutions. We offer consulting and development services in, among others, the following areas: audio/video real-time streaming and processing, mass storage, performance and
-            scalability.</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Open source contribution</h3>
-          <p>At Software Mansion we strongly believe that our commitment in Open-Sourced products is important. Thousands of developers have already used our React Native modules in production.
-          </p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Education</h3>
-          <p>It is amazing to see rapid development of multiple technologies around us. If you create apps with React Native or Expo, you probably use code written at Software Mansion. Through lectures, presentations, workshops and hackathons we
-            spread knowledge among students and professionals eager to learn.
-          </p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Startup development</h3>
-          <p>Start-ups were our focus since the start of Software Mansion. We offer consulting, design, development and analysis services for startups in all stages of growth. We are also involved in several start-ups as cofounders.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </section>
-  <section>
-    <div class="container bckColor">
-      <h1 class="text-center">Our Team</h1>
-    </div>
-    <hr />
-    <div class="container">
-      <div class="row py-3">
-        <div class="col col-12 col-sm-6 col-lg-3 col-lg-offset-2 name">
-          <div class="container"><img src="team3.jpg" class="img-responsive center-block"></div>
-          <div>Robert Men</div>
-
-        </div>
-        <div class=" col col-12 col-sm-6 col-lg-3 col-lg-offset-2  name">
-          <div class="container"><img src="team6.jpg" class="img-responsive center-block"></div>
-          <div>Jan Gibas</div>
-
-        </div>
-        <div class="col col-12 col-sm-6 col-lg-3 col-lg-offset-2  name">
-          <div class="container name"><img src="team2.jpg" class="img-responsive center-block"></div>
-          <div>Karol Wojak</div>
-
-        </div>
-        <div class="col col-12 col-sm-6 col-lg-3 col-lg-offset-2  name">
-          <div class="container name"><img src="team9.jpg" class="img-responsive center-block"></div>
-          <div>Urk</div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container bckColor">
-      <h1 class="text-center">Career</h1>
-    </div>
-    <hr />
-    <p class="container bckColor">Currently we are looking do Software Engineers and Software Engineer Interns. We don't have any specific requirements, we are just looking for smart people. If you think that you would fit here, fill form below!
-    </p>
-
-    <form class="container bckColor">
-      <div class="form-group text-left">
-        <label for="sample ">Email</label>
-        <input type="email" class="form-control" id="sample" placeholder="sample@gmail.com">
-      </div>
-      <div class="form-group text-left">
-        <label for="przykladowySelect">Possition</label>
-        <select class="form-control" id="przykladowySelect">
-          <option>Software Engineer</option>
-          <option>Software Engineer Intern</option>
-
-        </select>
-      </div>
-      <div class="form-group text-left">
-        <label for="cs">Attach CV</label>
-        <input type="file" class="form-control-file" id="cs">
-      </div>
-      <div class="form-check text-left">
-        <input type="checkbox" class="form-check-input" id="RODO">
-        <label class="form-check-label" for="RODO">I agree RODO doesnt kill us!</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Send</button>
-    </form>
-
-  </section>
 
 
   <footer class="bg-dark pb-4">
 
-    <div class="container text-left pt-4 text-light">
-      <p>Contact</p>
-      <div div class="g">
-        <img src="git.svg" class="img col-sm-12">
-        <p class="img col-sm-12">Grzegorz Poręba <br>
-          Email: grzegorz.poreba.73@gmail.com</p>
+    <div class="container text-left pt-4 text-light align-center">
+
+      <div div class="row ">
+
+        <div div class="col-sm-12 col-md-2">
+          <a href="https://github.com/Wokstym">
+            <img class="g" src="git.svg">
+          </a>
+        </div>
+
+        <div div class="col-sm-12 col-md-10">
+          <p class="img "><br>Grzegorz Poręba <br>
+            Email: grzegorz.poreba.73@gmail.com</p>
+        </div>
       </div>
 
     </div>

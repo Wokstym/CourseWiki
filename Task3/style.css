@@ -39,6 +39,16 @@ main {
   padding-bottom: 5%;
 }
 
+
+
+.b1{
+  width: 10%;
+}
+.b2{
+  text-align: right;
+}
+
+
 .header2 {
   position: absolute;
   text-align: center;
@@ -96,10 +106,22 @@ main {
   border: solid 2px rgba(245, 245, 245, 0.685);
   border-radius: 25px;
   height: 160px;
+  
   width: auto;
   margin: 1rem;
   margin: auto;
   position: relative;
+  
+  transition-duration: 1s;
+}
+
+.grid-item p{
+  max-height: 800px;
+  transition-duration:  1s;
+  overflow:hidden;
+  visibility: hidden;
+  height:0px;
+  /*transition: height 2s;*/
 }
 
 footer {
@@ -112,6 +134,96 @@ footer {
   margin-top: 5%;
   margin-bottom: 3%;
 }
+
+.form{
+  position:fixed;
+  top:200px;
+  
+  left:-475px;
+  transition: all 1.5s;
+}
+.form img{
+  /*max-width: 95%;
+  height: auto;*/
+  position: relative;
+  height:60px;
+  width:60px;
+  float:right;
+  transition: all 1.5s;
+  padding: 10px ;
+}
+
+
+.form-inside{
+  height:500px;
+  width:425px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  float:left;
+}
+
+.form-inside legend {
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+.form-inside textarea{
+  height: 200px;
+}
+
+.form-inside input[type="text"],
+.form-inside input[type="url"],
+.form-inside textarea {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 4px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	background-color: #e8eeef;
+	color:#8a97a0;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+.form-inside input[type="text"]:focus,
+.form-inside input[type="url"]:focus,
+.form-inside textarea:focus{
+	background: #d2d9dd;
+}
+
+
+
+.form-inside input[type="submit"],
+.form-inside input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+.form-inside input[type="submit"]:hover,
+.form-inside input[type="button"]:hover
+{
+	background: #109177;
+}
+
+
 
 @media (max-width:1250px) {
   .grid-container {

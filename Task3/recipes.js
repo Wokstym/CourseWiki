@@ -1,5 +1,4 @@
 var imgbuttons = document.querySelectorAll(".grid-item img")
-var imgbuttons = document.querySelectorAll(".grid-item img")
 function show(img){
     img.previousElementSibling.style = "visibility: visible; height:200px";
     img.style ="-webkit-filter: blur(5px); filter: blur(5px);"

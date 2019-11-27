@@ -1,25 +1,26 @@
 var imgbuttons = document.querySelectorAll(".grid-item img")
-function show(img){
+
+function showHideRecipe(img) {
+  for (item of imgbuttons) {
+    if (item != img) {
+      if (item.previousElementSibling.offsetHeight != 0)
+        hideImg(item)
+    }
+  }
+  if (img.previousElementSibling.offsetHeight == 0) {
     img.previousElementSibling.style = "visibility: visible; height:200px";
-    img.style ="-webkit-filter: blur(5px); filter: blur(5px);"
+    img.style = "-webkit-filter: blur(5px); filter: blur(5px);"
+  } else {
+    hideImg(img);
+  }
 }
-function hide(img){
-    img.previousElementSibling.style = "visibility: hidden; height:0";
-    img.style ="-webkit-filter: none; filter: none;"
+for (item of imgbuttons) {
+  item.addEventListener('click', function() {
+    showHideRecipe(this)
+  })
 }
-function hideOrShow(img){
-    for(item of imgbuttons){
-        if (item != img){
-            if (item.previousElementSibling.offsetHeight!=0)
-            hide(item)
-        }
-    }
-    if (img.previousElementSibling.offsetHeight==0)
-    show(img)
-    else{
-        hide(img);
-    }
-}
-for(item of imgbuttons){
-    item.addEventListener('click',function(){hideOrShow(this)})
+
+function hideImg(img) {
+  img.previousElementSibling.style = "visibility: hidden; height:0";
+  img.style = "-webkit-filter: none; filter: none;"
 }

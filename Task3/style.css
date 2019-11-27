@@ -106,13 +106,18 @@ main {
   border: solid 2px rgba(245, 245, 245, 0.685);
   border-radius: 25px;
   height: 160px;
-  
+
   width: auto;
   margin: 1rem;
   margin: auto;
   position: relative;
-  
+
   transition-duration: 1s;
+}
+
+.grid-item img:hover{
+  	background: red  ;
+    transition-duration: 0.1s;
 }
 
 .grid-item p{
@@ -138,7 +143,7 @@ footer {
 .form{
   position:fixed;
   top:200px;
-  
+
   left:-475px;
   transition: all 1.5s;
 }
@@ -186,7 +191,7 @@ footer {
 	outline: 0;
 	padding: 10px;
 	width: 100%;
-	box-sizing: border-box; 
+	box-sizing: border-box;
 	background-color: #e8eeef;
 	color:#8a97a0;
 	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;

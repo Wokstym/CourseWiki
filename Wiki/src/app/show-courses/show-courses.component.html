@@ -1,8 +1,8 @@
-<h2>My Courses</h2>
+<h2>Kursy:</h2>
 <ul>
-  <li *ngFor="let course of courses" (click)="onSelect(course)">
-    <span>{{course.name}}</span> {{course.ects}}
+  <li *ngFor="let course of courses">
+     <a routerLink="/course/{{course.id}}">
+    <span>{{course.name}}</span> 
+  </a>
   </li>
 </ul>
-
-<app-course-detail [course]="selectedCourse"> </app-course-detail>

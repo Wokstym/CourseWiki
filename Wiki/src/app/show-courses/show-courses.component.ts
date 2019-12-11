@@ -9,11 +9,7 @@ import { COURSES } from '../mock-courses'
 })
 export class ShowCoursesComponent implements OnInit {
   courses = COURSES;
-  selectedCourse: Course;
-  onSelect(course: Course): void {
-    
-    this.selectedCourse = course;
-  }
+  
   constructor() { }
 
   ngOnInit() {

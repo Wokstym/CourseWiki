@@ -2,6 +2,7 @@ import { Course } from './models/course.model'
 
 export const COURSES: Course[] = [
   {
+    id: '1',
     name: 'Podstawy Baz Danych',
     ects: 4,
     image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1321&q=80',
@@ -12,6 +13,7 @@ export const COURSES: Course[] = [
     grade: 5
   },
   {
+    id: '2',
     name: 'Fizyka',
     ects: 6,
     image: 'https://images.unsplash.com/photo-1527409335569-f0e5c91fa707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
@@ -22,6 +24,7 @@ export const COURSES: Course[] = [
     grade: 1
   },
   {
+    id: '3',
     name: 'Programowanie obiektowe',
     ects: 3,
     image: 'https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80',

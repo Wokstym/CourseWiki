@@ -1,4 +1,7 @@
 <div *ngIf="course">
+  <nav>
+    <a routerLink="/courses">Courses</a>
+  </nav>
   <h2> {{course.name}} szczegóły:</h2>
   <div><span>Ects: </span>{{course.ects}}</div>
   <div><span>Opis: </span>{{course.description}}</div>

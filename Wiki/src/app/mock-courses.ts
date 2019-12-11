@@ -33,5 +33,16 @@ export const COURSES: Course[] = [
     courseForm: 'Labolatoria',
     maxStudents: 12,
     grade: 6
+  },
+  {
+      id: '4',
+      name: 'Rurki',
+      ects: 4,
+      image: 'https://images.unsplash.com/photo-1499673610122-01c7122c5dcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80',
+      description: 'Wykład jest podstawowym kursem z zakresu równań różniczkowych zwyczajnych. Dwa główne tematy: jak rozwiązywać równania różniczkowe i jak interpretować te równania w kontekście fizycznym. Cechą charakterystyczną wykładu jest wyważona proporcja pomiędzy metodologią, zastosowaniami i podstawami teoretycznymi przedmiotu.',
+      semester: 3,
+      courseForm: 'Labolatoria',
+      maxStudents: 12,
+      grade: 6
   }
 ];

@@ -1,8 +1,9 @@
 <h2>Kursy:</h2>
 <ul>
   <li *ngFor="let course of courses">
-     <a routerLink="/course/{{course.id}}">
-    <span>{{course.name}}</span> 
-  </a>
+    <a routerLink="/course/{{course.id}}">
+      <img src={{course.image}} style="width:50px;height:60px;">
+      <span>{{course.name}}</span>
+    </a>
   </li>
 </ul>

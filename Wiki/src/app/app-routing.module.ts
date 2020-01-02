@@ -6,6 +6,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component'
 const routes: Routes = [
   { path: 'courses', component: ShowCoursesComponent},
   { path: 'course/:id', component: CourseDetailComponent},
+  { path: '', redirectTo: '/courses', pathMatch: 'full' }
   //{path: '', redirectTo: '/courses'}
 ];
 

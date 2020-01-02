@@ -4,6 +4,19 @@
     text-align:center;
 }
 
+.button{
+   color:whitesmoke;
+   display: block;
+   margin:auto;
+   padding:1rem 3rem;
+   background-color: rgb(223, 121, 121);
+   margin-top:3rem;
+   border: solid 2px rgba(190, 65, 65, 0.685);
+   border-radius: 10px;
+   align-self: center;
+   margin-bottom:1rem;
+   min-width:auto;
+   font-size:20px;
 
 
 .container > img {

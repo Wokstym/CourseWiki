@@ -1,0 +1,22 @@
+.cards-container{
+    display: grid;
+    padding: 10%;
+    padding-bottom: 5%;
+    grid-template-columns: auto auto;
+    
+}
+
+.cards-container-image {
+    height: 100%;
+    width: 55vh;
+    
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
+
+  .mat-card{
+      margin: 10px;
+      background-color: #1f2229;
+      text-emphasis-color: white;
+  }

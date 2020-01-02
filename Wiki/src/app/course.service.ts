@@ -8,9 +8,40 @@ import {Observable, of } from 'rxjs';
 })
 export class CourseService {
 
+  courses: Course[];
+
   getCourse(id: string): Observable<Course> {
-    return of(COURSES.find(course => course.id === id));
+    return of(this.courses.find(course => course.id === id));
   }
 
-  constructor() { }
+  getCourses(){
+    return this.courses;
+  }
+
+  addCourse(name: string, ects: number, image: string, description: string, semester: number, courseForm: string, maxStudents: number) {
+    const course: Course = {
+      id: (this.courses.length + 1).toString(),
+      name,
+      ects,
+      image,
+      description,
+      semester,
+      grade: 0,
+      courseForm,
+      maxStudents,
+
+    };
+    this.courses.push(course);
+  }
+
+  deleteCourse(id: string)
+  {
+    const courseToDelete =  this.courses.find(course => course.id === id);
+    const index = this.courses.indexOf(courseToDelete);
+    this.courses.splice(index, 1);
+  }
+
+  constructor() {
+    this.courses=COURSES;
+   }
 }

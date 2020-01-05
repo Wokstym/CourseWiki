@@ -1,0 +1,38 @@
+.content{
+    padding-left: 40px;
+    padding-right: 40px;
+  
+    /* display: grid; */
+    /*grid-template-columns: auto auto auto;
+    grid-gap: 100px; */
+    
+}
+
+.form{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 1200px;
+  }
+
+  @media (max-width:1250px) {
+
+    mat-form-field {
+        width: 800px;
+      }
+
+  }
+   
+
+  @media (max-width:850px) {
+      
+    mat-form-field {
+        width: 300px;
+      }
+
+    }
+  
+    

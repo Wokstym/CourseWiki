@@ -3,17 +3,24 @@
         <a routerLink="/course/{{course.id}}">
         <img class="codepen-card-image" src="{{course.image}}" alt="">
             <div class="codepen-card-user">
-                <img src="https://picsum.photos/100/100" alt="" class="codepen-card-user-image">
+                <img [src]="course.courseForm== labCond ?  labImgUrl : classImgUrl"  alt="" class="codepen-card-user-image">
                 <div class="codepen-card-user-details">
                     <h1 class="title">
                     {{course.name}}
                     </h1>
                     <p >
-                        <span class="fa fa-star checked"></span>
+                        <!-- <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> -->
+                        <ng-template #t let-fill="fill">
+                            <span class="star" [class.full]="fill === 100">
+                              <span class="half" [style.width.%]="fill"> <span class="fa fa-star checked"></span></span><span class="fa fa-star"></span>
+                            </span>
+                          </ng-template>
+
+                          <ngb-rating [(rate)]="course.grade" [starTemplate]="t" [readonly]="true" max="6"></ngb-rating>
                     </p>
                 </div>
         

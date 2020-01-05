@@ -1,0 +1,41 @@
+<div class="content">
+
+  <form class="form" [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label for="name">Nazwa kursu</mat-label>
+      <input matInput  type="text" id="name" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="ects">Liczba punktów ECTS</mat-label>
+      <input matInput   type="number" id="ects" formControlName="ects">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="image">Awatar kursu</mat-label>
+      <input matInput  type="text" id="image" formControlName="image">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="description">Opis</mat-label>
+      <textarea matInput  type="text" id="description" formControlName="description" rows="6"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="semester">Semestr</mat-label>
+      <input matInput    type="number" id="semester" formControlName="semester">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label for="courseForm">Forma kursu</mat-label>
+      <mat-select id="courseForm" formControlName="courseForm"  [(value)]="isEditing? currCourse.courseForm : empty ">
+        <mat-option *ngFor="let courseForm of courseForms" [value]="courseForm">{{courseForm}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline"   >
+      <mat-label for="maxStudents">Maksymalna liczba studentów</mat-label>
+      <input matInput  type="number" id="maxStudents" formControlName="maxStudents" />
+    </mat-form-field>
+
+
+
+    <button mat-raised-button color="primary" type="submit" [disabled]=" !courseForm.valid" >{{buttonText}}</button>
+  </form>
+
+
+</div>

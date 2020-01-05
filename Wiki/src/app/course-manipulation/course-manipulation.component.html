@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="btn-group  offset-5">
+      <button mat-raised-button [color]="'green'" (click)="true" routerLink="addCourse">Dodaj kurs</button>
+      <button mat-raised-button color="warn" (click)="true" routerLink="editCourse"
+        [queryParams]="{isEditing: false}">Zarządzaj</button>
+    </div>
+    <div class="col-8 offset-2">
+      <router-outlet ></router-outlet>
+    </div>
+  </div>
+</div>

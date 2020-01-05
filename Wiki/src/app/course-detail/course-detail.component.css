@@ -14,9 +14,8 @@
     border-radius: 15px;
     margin-bottom: 1rem;
   }
-
-  .mat-card{
-      margin: 10px;
-      background-color: #1f2229;
-      text-emphasis-color: white;
+  .cardd{
+      padding-left: 10px;
   }
+
+

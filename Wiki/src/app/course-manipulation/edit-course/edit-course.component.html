@@ -1,0 +1,15 @@
+<div >
+    <div >
+      <mat-list >
+        <mat-list-item [class.mat-elevation-z8]="true" *ngFor="let course of courses" role="navigation" class="items" >
+        {{ course.name }}, {{ course.courseForm }}, Semestr: {{ course.semester }}  
+        <div class="bttns">
+             <button mat-raised-button color="primary" routerLink="{{ course.id }}"[queryParams]="{isEditing: true}" >Edytuj</button>
+          <button mat-raised-button color="warn" (click)="remove(course.id)" >Usun</button>
+        </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+<!-- 
+  [state]="{ data: {true, course}}" -->

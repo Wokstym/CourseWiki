@@ -13,8 +13,7 @@ h2, h3 {
   font-weight: lighter;
 }
 body {
-  margin: 2em;
-  background-color: #131417;
+  background-color: #e1f5fe;
 }
 body, input[type="text"], button {
   color: #333;
@@ -24,3 +23,4 @@ body, input[type="text"], button {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+

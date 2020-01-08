@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Course } from '../models/course.model';
-import { CourseService } from '../course.service'
+import { Course } from '../../models/course.model';
+import { CourseService } from '../../services/course.service'
 import { ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common'
 //import { UserService } from 'src/app/my-courses/user.service'

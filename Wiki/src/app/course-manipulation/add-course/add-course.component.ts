@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../../models/course.model';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { CourseService } from '../../course.service'
+import { CourseService } from '../../services/course.service'
 import { filter } from 'rxjs/operators';
 
 @Component({

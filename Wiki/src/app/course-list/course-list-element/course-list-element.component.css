@@ -1,21 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
 
 a {
-    text-decoration: none;
-   }
+  text-decoration: none;
+}
 
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-.fa-star{
-    color: #555555;
+
+.fa-star {
+  color: #555555;
 }
 
 .checked {
-    color: orange;
-  }
+  color: orange;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  color: #d3d3d3;
+}
+
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: red;
+}
+
+
 
 .container {
   display: flex;
@@ -26,7 +42,7 @@ a {
   background: linear-gradient(to bottom right, white, lightgrey)
 }
 
-.codepen-card {
+.move-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -37,19 +53,9 @@ a {
   cursor: pointer;
 }
 
-.star {
-  position: relative;
-  display: inline-block;
-  color: #d3d3d3;
-}
-.half {
-  position: absolute;
-  display: inline-block;
-  overflow: hidden;
-  color: red;
-}
 
-.codepen-card:before {
+
+.move-card:before {
   content: ' ';
   position: absolute;
   bottom: 0;
@@ -62,18 +68,13 @@ a {
   transition: all 150ms ease;
 }
 
-.codepen-card:hover > .codepen-card-metrics {
-  height: 20px;
-  transition: all 300ms ease;
-}
-
-.codepen-card:hover:before {
+.move-card:hover:before {
   width: 100%;
   height: 100%;
   transition: all 300ms ease;
 }
 
-.codepen-card-image {
+.move-card-image {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -81,38 +82,27 @@ a {
   margin-bottom: 1rem;
 }
 
-.codepen-card-user {
+.move-card-course {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
-.codepen-card-user-image {
+.move-card-lab-image {
   object-fit: cover;
   width: 50px;
   height: 50px;
   border-radius: 5px;
 }
 
-.codepen-card-user-details {
+.move-card-course-details {
   flex: 1;
   color: white;
   padding: 0 0.5rem;
 }
 
-.codepen-card-user-details > .title {
+.move-card-course-details>.title {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0;
-}
-
-.codepen-card-user-details > .name {
-  font-size: 0.875rem;
-  margin: 0;
-}
-
-.codepen-card-metrics {
-  height: 0;
-  overflow: hidden;
-  transition: all 150ms ease;
 }

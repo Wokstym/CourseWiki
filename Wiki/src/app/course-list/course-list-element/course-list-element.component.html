@@ -1,19 +1,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <div class="codepen-card">
+    <div class="move-card">
         <a routerLink="/course/{{course.id}}">
-        <img class="codepen-card-image" src="{{course.image}}" alt="">
-            <div class="codepen-card-user">
-                <img [src]="course.courseForm== labCond ?  labImgUrl : classImgUrl"  alt="" class="codepen-card-user-image">
-                <div class="codepen-card-user-details">
+        <img class="move-card-image" src="{{course.image}}" alt="">
+            <div class="move-card-course">
+                <img [src]="course.courseForm== labCond ?  labImgUrl : classImgUrl"  alt="" class="move-card-lab-image">
+                <div class="move-card-course-details">
                     <h1 class="title">
                     {{course.name}}
                     </h1>
                     <p >
-                        <!-- <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span> -->
+                       
                         <ng-template #t let-fill="fill">
                             <span class="star" [class.full]="fill === 100">
                               <span class="half" [style.width.%]="fill"> <span class="fa fa-star checked"></span></span><span class="fa fa-star"></span>
@@ -29,7 +25,6 @@
         </a>
    
     </div>
-    <!-- <star-rating ng-model="rating.rating2" readonly="rating.isReadonly"></star-rating> -->
 
    
 

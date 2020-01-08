@@ -8,28 +8,21 @@
   
         <mat-card-content>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username">
+            <input type="email" matInput placeholder="E-mail"  [(ngModel)]="credentials.email"  name="email" required>
           </mat-form-field>
   
-          <mat-form-field class="example-full-width">
+          <!-- <mat-form-field class="example-full-width">
             <input matInput placeholder="Email">
-          </mat-form-field>
+          </mat-form-field> -->
   
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Password">
+            <input type="password" matInput placeholder="Hasło" [(ngModel)]="credentials.password" name="password" required>
           </mat-form-field>
   
-          <mat-form-field class="example-full-width">
-            <mat-label>Choose a role...</mat-label>
-            <mat-select [(value)]="selected">
-              <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
   
         </mat-card-content>
   
-        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+        <button mat-stroked-button type="submit" color="accent" (click)="register()" class="btn-block">Rejestracja</button>
   
       </form>
     </mat-card>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Course} from './models/course.model'
-import{ COURSES } from './mock-courses';
+import {Course} from '../models/course.model'
+import{ COURSES } from '../models/mock-courses';
 import {Observable, of } from 'rxjs';
 import { Subject } from 'rxjs';
 

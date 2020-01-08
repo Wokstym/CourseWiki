@@ -5,13 +5,15 @@
 export const environment = {
   production: false,
   firebase: {
+      apiKey: "AIzaSyCpmK8SB9LwReI_a_VBeqrKyyMSLGuuS1Q",
+      authDomain: "wiki-iet.firebaseapp.com",
+      databaseURL: "https://wiki-iet.firebaseio.com",
+      projectId: "wiki-iet",
+      storageBucket: "wiki-iet.appspot.com",
+      messagingSenderId: "729212350304",
+      appId: "1:729212350304:web:2554492358d55301c1b805",
+      measurementId: "G-L50VZ7K4GS"
 
-    apiKey: "AIzaSyCpmK8SB9LwReI_a_VBeqrKyyMSLGuuS1Q",
-    authDomain: "wiki-iet.firebaseapp.com",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "wiki-iet",
-    storageBucket: "wiki-iet.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID"
   }
 };
 /*

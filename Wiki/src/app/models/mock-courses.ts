@@ -1,4 +1,4 @@
-import { Course } from './models/course.model'
+import { Course } from './course.model'
 
 export const COURSES: Course[] = [
   {

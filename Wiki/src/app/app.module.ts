@@ -15,6 +15,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 
+
+
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -50,9 +52,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ShowCoursesComponent } from './show-courses/show-courses.component';
-import { CourseDetailComponent } from './course-detail/course-detail.component';
-import { CourseListElementComponent } from './course-list-element/course-list-element.component';
+import { ShowCoursesComponent } from './course-list/show-courses/show-courses.component';
+import { CourseDetailComponent } from './course-list/course-detail/course-detail.component';
+import { CourseListElementComponent } from './course-list/course-list-element/course-list-element.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { EctsFilterPipe } from './pipes/ects-filter.pipe';
 import { FilterNamePipe } from './pipes/filter-name.pipe';
@@ -85,6 +87,8 @@ import { RegisterComponent } from './auth/register/register.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+
+
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSliderModule,

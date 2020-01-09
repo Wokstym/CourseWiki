@@ -22,8 +22,9 @@ export class RegisterComponent  {
  
 
   register() {
-    this.authService.register(this.credentials);
-     
+    this.authService.register(this.credentials)
+    .then(() => this.router.navigate(['/login']))
+    .catch(err => console.log(err.message));
   }
 
 

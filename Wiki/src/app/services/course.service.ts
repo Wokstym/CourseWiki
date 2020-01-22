@@ -83,20 +83,13 @@ export class CourseService {
 
     };
     this.saveCourse(course);
-    //this.coursesChanged.next(this.courses);
-
   }
 
   addCourse(name: string, ects: number, image: string, description: string, semester: number, courseForm: string, maxStudents: number) {
     this.addCourseWID((Number(this.courses[this.courses.length-1].id) + 1).toString(), name, ects, image, description, semester, courseForm, maxStudents);
   }
 
-  // deleteCourse(id: string) {
-  //   const courseToDelete = this.courses.find(course => course.id === id);
-  //   const index = this.courses.indexOf(courseToDelete);
-  //   this.courses.splice(index, 1);
-  //   this.coursesChanged.next(this.courses.slice());
-  // }
+
 
   deleteCourse(id: string): Promise<void> {
 

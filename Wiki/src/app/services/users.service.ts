@@ -37,6 +37,8 @@ export class UsersService {
 
   }
 
+  
+
   getUsers(): AngularFirestoreCollection<LocalUser> {
     return this.usersRef;
   }

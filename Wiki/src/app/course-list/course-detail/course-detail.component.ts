@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common'
 //import { UserService } from 'src/app/my-courses/user.service'
 import { map } from 'rxjs/operators';
+import { UsersService } from '../../services/users.service';
+import { AuthService } from '../../auth/services/auth.service';
 
 @Component({
   selector: 'app-course-detail',
@@ -20,7 +22,7 @@ export class CourseDetailComponent implements OnInit {
   //@Input() course: Course;
 
   
-  constructor(private route: ActivatedRoute, private courseService: CourseService,private location: Location,  /*private userService: UserService*/) { }
+  constructor(private route: ActivatedRoute, private courseService: CourseService,private location: Location,  private userService: UsersService, private authService: AuthService) { }
 
   getCourses(): void {
     const id = this.route.snapshot.paramMap.get('id').toString();
@@ -36,6 +38,16 @@ export class CourseDetailComponent implements OnInit {
     });
 
    
+  }
+
+  joinCourse(): void{
+      //this.userService.getUser().then()
+      if(this.course.maxStudents-this.course.numberOfStudents<=0) return;
+      if(this)
+      this.course.numberOfStudents++;
+      this.courseService.saveCourse(this.course);
+      this.userService.addCourse(this.authService.userDb, this.authService.userDbKey, this.course);
+
   }
 
   ngOnInit() {

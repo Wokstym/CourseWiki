@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 100px;
+    justify-content: center;
+  }
+  @media (max-width:1250px) {
+    .grid-container {
+      grid-template-columns: auto auto;
+    }
+  
+    
+  }
+
+ 
+
+  .search-conatiner
+  {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  @media (max-width:850px) {
+    .grid-container {
+      grid-template-columns: auto;
+    }
+  
+    
+  }

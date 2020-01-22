@@ -65,6 +65,7 @@ import { EditCourseComponent } from './course-manipulation/edit-course/edit-cour
 import { CourseManipulationComponent } from './course-manipulation/course-manipulation.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { MyCoursesComponent } from './my-courses/my-courses.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { RegisterComponent } from './auth/register/register.component';
     CourseManipulationComponent,
     LoginComponent,
     RegisterComponent,
+    MyCoursesComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

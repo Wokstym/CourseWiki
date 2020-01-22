@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <div class="row">
+      <p class="lead col-12 text-center">Wyszukaj kurs</p>
+      <div class="col-md-5 mt-2">
+        <input [(ngModel)]="name" placeholder="Nazwa" class="form-control">
+      </div>
+      <div class="col-md-2 mt-2">
+        <input [(ngModel)]="ects" placeholder="ECTS" class="form-control">
+      </div>
+      <div class="col-md-2 mt-2">
+        <input [(ngModel)]="smtr" placeholder="Semestr" class="form-control">
+      </div>
+      <div class="col-md-2 mt-2">
+        <input [(ngModel)]="grade" placeholder="Ocena" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <app-course-list-element
+      *ngFor="let course of courses| filterName: name | filterEcts: ects | filterSemester: smtr | filterGrade: grade"
+      [course]="course">
+    </app-course-list-element>
+  </div>
+  
+  

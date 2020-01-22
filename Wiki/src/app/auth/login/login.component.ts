@@ -15,9 +15,12 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
+  error=null;
 
   constructor(private router: Router,
-    private authService: AuthService) { }
+    private authService: AuthService) { 
+      if(authService.isLoggedIn()) this.router.navigate(['/courses']);
+    }
 
   ngOnInit() {
   }
@@ -26,8 +29,8 @@ export class LoginComponent implements OnInit {
   login() {
     this.authService.login(this.credentials)
       .then(() => this.router.navigate(['/courses']))
-      .catch(err => console.log(err.message));
+      .catch(err =>  this.error=err.message);
 
-    console.log(this.authService.user);
+    console.log(this.error);
   }
 }

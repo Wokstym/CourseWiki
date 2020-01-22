@@ -11,14 +11,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
-
+import { AuthGuard } from './auth/services/guard/auth.guard';
 
 const routes: Routes = [
-  { path: 'courses', component: ShowCoursesComponent },
-  { path: 'course/:id', component: CourseDetailComponent },
-  { path: '', redirectTo: '/courses', pathMatch: 'full' },
+  { path: 'courses', component: ShowCoursesComponent,  canActivate: [AuthGuard] },
+  { path: 'course/:id', component: CourseDetailComponent,  canActivate: [AuthGuard]  },
+  { path: '', redirectTo: '/login', pathMatch: 'full',  canActivate: [AuthGuard]  },
   {
-    path: 'refactor', component: CourseManipulationComponent, children: [
+    path: 'refactor', component: CourseManipulationComponent, canActivate: [AuthGuard] , children: [
       { path: 'editCourse', component: EditCourseComponent, pathMatch: 'full' },
       { path: 'editCourse/:id', component: AddCourseComponent },
       { path: 'addCourse', component: AddCourseComponent },

@@ -4,6 +4,7 @@ import { CourseService } from '../../services/course.service'
 import { ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common'
 //import { UserService } from 'src/app/my-courses/user.service'
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-course-detail',
@@ -23,12 +24,19 @@ export class CourseDetailComponent implements OnInit {
 
   getCourses(): void {
     const id = this.route.snapshot.paramMap.get('id').toString();
-    this.courseService.getCourse(id)
-    .subscribe(course => this.course=course);
+
+    this.courseService.getCourses().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ key: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(c => {
+      this.course=c.find(course => course.id === id);
+    });
+
+   
   }
-  // joinCourse() {
-  //   if (!this.userService.courseService.canJoin(this.course.id)) { window.alert('Niestety nie ma już miejsc na ten kurs'); } else { this.userService.joinCourse(this.course.id); }
-  // }
 
   ngOnInit() {
     this.getCourses();

@@ -4,6 +4,8 @@ import * as firebase from 'firebase/app';
 import { User } from 'firebase';
 import { Observable } from 'rxjs/index';
 
+import { map } from 'rxjs/operators';
+import { UsersService } from '../../services/users.service';
 
 export interface Credentials {
   email: string;
@@ -17,10 +19,27 @@ export class AuthService {
 
   readonly authState$: Observable<User | null> = this.fireAuth.authState;
  
-  constructor(private fireAuth: AngularFireAuth) {}
+  users: any;
+
+  constructor(private fireAuth: AngularFireAuth, private usersService: UsersService) {  this.init();}
  
+
+  
+  init() {
+    this.usersService.getUsers().snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c =>
+          ({ key: c.payload.doc.id, ...c.payload.doc.data() })
+        )
+      )
+    ).subscribe(users => {
+      this.users = users;
+    });
+  }
+
+
   get user(): User | null {
-    return this.fireAuth.auth.currentUser;
+    return  this.fireAuth.auth.currentUser;
   }
  
   login({email, password}: Credentials) {
@@ -32,6 +51,24 @@ export class AuthService {
   }
  
   logout() {
+    localStorage.removeItem('user');
     return this.fireAuth.auth.signOut();
   }
+
+  isLoggedIn(){
+    return this.user != null;
+  }
+
+  isAdmin(): boolean {
+    let isAdmin = false;
+    this.users.forEach(user => {
+      if (user.email == this.user.email) {
+        isAdmin = true;
+        return;
+      }
+    });
+
+    return isAdmin;
+  }
+
 }

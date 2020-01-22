@@ -97,15 +97,19 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" routerLinkActive="active">
-        <a mat-button class="nav-link" routerLink="/courses">Kursy<span class="sr-only">(current)</span></a>
+        <a mat-button class="nav-link" *ngIf="authService.isLoggedIn()" routerLink="/courses">Kursy<span class="sr-only">(current)</span></a>
       </li>
     
       <li class="nav-item" routerLinkActive="active">
-        <a mat-button class="nav-link" routerLink="/refactor">Edycja kursów</a>
+        <a mat-button class="nav-link" *ngIf="authService.isLoggedIn() && authService.isAdmin()" routerLink="/refactor">Edycja kursów</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a mat-button class="nav-link" routerLink="/login">Zaloguj się</a>
+        <a mat-button  *ngIf="!authService.isLoggedIn()" class="nav-link" routerLink="/login">Zaloguj się</a>
       </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a  mat-button *ngIf="authService.isLoggedIn()" class="nav-link" (click)="authService.logout() " routerLink="/login" >Wyloguj się {{authService.user.email}}</a>
+    </li> 
      
     </ul>
   </div>

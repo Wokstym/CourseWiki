@@ -82,8 +82,7 @@ export class AddCourseComponent implements OnInit {
     const semester: number = this.courseForm.value.semester;
     const courseForm: string = this.courseForm.value.courseForm;
     const maxStudents: number = this.courseForm.value.maxStudents;
-    if (!this.isEditing) this.courseService.addCourse(name, ects, image, description, semester, courseForm, maxStudents);
-    else this.courseService.addCourseWID(this.currCourse.id, name, ects, image, description, semester, courseForm, maxStudents);
+    this.courseService.addCourse(name, ects, image, description, semester, courseForm, maxStudents);
     this.route.navigate(['/courses']);
 
   }

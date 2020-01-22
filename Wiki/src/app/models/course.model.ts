@@ -8,4 +8,5 @@ export interface Course {
   courseForm: string;
   maxStudents: number;
   grade: number;
+  numberOfStudents: number;
 }

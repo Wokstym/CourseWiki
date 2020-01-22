@@ -10,7 +10,8 @@ export const COURSES: Course[] = [
     semester: 3,
     courseForm: 'Labolatoria',
     maxStudents: 12,
-    grade: 5
+    grade: 5,
+    numberOfStudents:0
   },
   {
     id: '2',
@@ -21,7 +22,8 @@ export const COURSES: Course[] = [
     semester: 3,
     courseForm: 'Ćwiczenia',
     maxStudents: 30,
-    grade: 1
+    grade: 1,
+    numberOfStudents:0
   },
   {
     id: '3',
@@ -32,7 +34,8 @@ export const COURSES: Course[] = [
     semester: 3,
     courseForm: 'Labolatoria',
     maxStudents: 12,
-    grade: 6
+    grade: 6,
+    numberOfStudents:0
   },
   {
       id: '4',
@@ -43,7 +46,8 @@ export const COURSES: Course[] = [
       semester: 3,
       courseForm: 'Labolatoria',
       maxStudents: 12,
-      grade: 3.5
+      grade: 3.5,
+      numberOfStudents:0
   },
   {
     id: '5',
@@ -55,6 +59,7 @@ export const COURSES: Course[] = [
     courseForm: 'Ćwiczenia',
     maxStudents: 35,
     grade: 3,
+    numberOfStudents:0
 
   },
   {
@@ -67,6 +72,7 @@ export const COURSES: Course[] = [
     courseForm: 'Ćwiczenia',
     maxStudents: 22,
     grade: 4,
+    numberOfStudents:0
 
   },
   {
@@ -79,7 +85,7 @@ export const COURSES: Course[] = [
     courseForm: 'Labolatoria',
     maxStudents: 16,
     grade: 4,
-
+    numberOfStudents:0
   },
   {
     id: '8',
@@ -91,7 +97,7 @@ export const COURSES: Course[] = [
     courseForm: 'Ćwiczenia',
     maxStudents: 22,
     grade: 2,
-
+    numberOfStudents:0
   },
   {
     id: '9',
@@ -103,7 +109,7 @@ export const COURSES: Course[] = [
     courseForm: 'Ćwiczenia',
     maxStudents: 22,
     grade: 5.33,
-
+    numberOfStudents:0
   },
  
 
@@ -118,7 +124,7 @@ export const COURSES: Course[] = [
     courseForm: 'Labolatoria',
     maxStudents: 18,
     grade: 5,
-
+    numberOfStudents:0
   },
   {
     id: '11',
@@ -130,6 +136,6 @@ export const COURSES: Course[] = [
     courseForm: 'Labolatoria',
     maxStudents: 15,
     grade: 3.5,
-
+    numberOfStudents:0
   }
 ];

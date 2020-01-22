@@ -8,24 +8,30 @@ import { Router } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrls: ['../login/login.component.css']
 })
-export class RegisterComponent  {
+export class RegisterComponent {
 
   credentials = {
     email: '',
-    password: ''
+    password: '',
   }
-  
 
-  constructor( private router: Router,
+
+
+
+  constructor(private router: Router,
     private authService: AuthService) { }
 
- 
+
 
   register() {
     this.authService.register(this.credentials)
-    .then(() => this.router.navigate(['/login']))
-    .catch(err => console.log(err.message));
+      .then(() => this.router.navigate(['/courses']))
+      .catch(err => console.log(err.message));
+
+
   }
+
+
 
 
 }

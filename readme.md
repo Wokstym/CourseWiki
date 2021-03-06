@@ -1,8 +1,6 @@
-# Introduction to Web Aplication
+# Course wiki
 
-Task and project from labolatories
-
-## [Temporary showcase of tasks](https://wokstym.github.io/IntrToWebAplic/)
+Angular project for managing and singing for courses offered by Computer Science.
 
 ## Project showcase
-![](Wiki/res/presentation.gif)
+![](res/presentation.gif)
